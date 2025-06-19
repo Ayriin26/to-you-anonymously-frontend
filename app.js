@@ -68,7 +68,7 @@ function displayNotes(list) {
 searchInput.addEventListener("input", () => {
   const term = searchInput.value.toLowerCase();
   const filtered = notes.filter((n) =>
-    (n.name || "").toLowerCase().includes(term) ||
+    (n.toName || "").toLowerCase().includes(term) ||
     (n.message || "").toLowerCase().includes(term)
   );
   displayNotes(filtered);
