@@ -65,7 +65,7 @@ function displayNotes(list) {
   });
 }
 
-sesearchInput.addEventListener("input", () => {
+searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
 
   const filtered = notes.filter((n) =>
