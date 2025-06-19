@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>To You, Anonymously</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,9 +23,9 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <form id="noteForm">
-        <textarea id="message" placeholder="Write your message..." required></textarea>
-        <input type="text" id="senderName" placeholder="Your name (optional)" />
-        <input type="text" id="recipientName" placeholder="To (required)" />    
+        <input type="text" id="recipientName" placeholder="Recipient's Name (required)" required />
+        <textarea id="message" placeholder="Write your anonymous message..." required></textarea>
+        <input type="text" id="senderName" placeholder="Your Name (optional)" />
         <button type="submit">Submit</button>
       </form>
     </div>
