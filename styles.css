@@ -107,6 +107,10 @@ header input {
   border: 1px solid #ddd;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .modal-content button {
@@ -132,10 +136,15 @@ header input {
   font-size: 22px;
   color: #aaa;
   cursor: pointer;
+  z-index: 10;
+  background: white;
+  padding: 0 8px;
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .close:hover {
-  color: #555;
+  color: #080808;
 }
 
 @keyframes fadeIn {
