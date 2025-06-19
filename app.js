@@ -7,6 +7,7 @@ const notesContainer = document.getElementById("notesContainer");
 const form = document.getElementById("noteForm");
 const senderInput = document.getElementById("senderName");
 const messageInput = document.getElementById("message");
+const recipientInput = document.getElementById("recipientName");
 const addNoteBtn = document.getElementById("addNoteBtn");
 const noteModal = document.getElementById("noteModal");
 const closeModalBtn = document.querySelector(".close");
@@ -24,10 +25,11 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = {
-    name: senderInput.value.trim(),
-    message: messageInput.value.trim()
+    toName: recipientInput.value.trim(),           // 🎯 required
+    message: messageInput.value.trim(),            // 🎯 required
+    fromName: senderInput.value.trim() || 'Anonymous' // optional
   };
-
+  
   if (!data.message) return alert("Please enter a message.");
 
   try {
