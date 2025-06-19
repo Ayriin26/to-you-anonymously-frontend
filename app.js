@@ -59,20 +59,23 @@ function displayNotes(list) {
     note.className = "note";
     note.innerHTML = `
       <p class="message">${n.message}</p>
-      <p class="sender">— From ${n.name || "Anonymous"}</p>
+      <p class="sender">— From ${n.fromName || "Anonymous"}</p>
     `;
     notesContainer.appendChild(note);
   });
 }
 
-searchInput.addEventListener("input", () => {
-  const term = searchInput.value.toLowerCase();
+sesearchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
   const filtered = notes.filter((n) =>
-    (n.toName || "").toLowerCase().includes(term) ||
-    (n.message || "").toLowerCase().includes(term)
+    (n.toName || "").toLowerCase().includes(query) ||
+    (n.message || "").toLowerCase().includes(query)
   );
+
   displayNotes(filtered);
 });
+
 
 async function loadNotes() {
   try {
